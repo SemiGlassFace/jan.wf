@@ -1,0 +1,49 @@
+---
+---
+<nav class="nav">
+    <div class="brand">Jan Piotrowski</div>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+    </ul>
+</nav>
+
+<style>
+    .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .brand {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #111827;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.25rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #374151;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #111827;
+    }
+</style>

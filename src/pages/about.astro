@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+import bibtexParse from 'bibtex-parse-js';
+import bibContent from '../data/publications.bib?raw';
+import aboutData from '../data/about.json';
+import Navbar from '../components/Navbar.astro';
+
+const publications = bibtexParse.toJSON(bibContent);
+const { education, experience, chipcie } = aboutData;
+---
+
+<Layout title="Jan Piotrowski - About Me">
+    <main class="about">
+        <Navbar />
+
+        <article class="content">
+            <h1>About Me</h1>
+            <section>
+                <p>
+                    Hi! I'm Jan Piotrowski, a Master Computer Science student at TU Delft and a Machine Learning Engineer at Huawei's Amsterdam Research Centre.
+                </p>
+                <p>
+                    I am also currently a commisioner of systems in <a href="https://chipcie.wisv.ch/">CHipCie</a>, where I have helped organize following ICPC style competitions:
+                </p>
+                <ul class="chipcie-list">
+                    {chipcie.map((comp: string) => (
+                        <li>{comp}</li>
+                    ))}
+                </ul>
+                <p>
+                    In my spare time I love tinkering with my homelab setup, which this site actually runs from.
+                </p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <ul class="timeline">
+                    {education.map((item) => (
+                        <li>
+                            <div class="timeline-header">
+                                <strong>{item.degree}</strong>
+                                <span class="date">{item.date}</span>
+                            </div>
+                            <div class="institution">{item.institution}</div>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+                <ul class="timeline">
+                    {experience.map((item) => (
+                        <li>
+                            <div class="timeline-header">
+                                <strong>{item.role}</strong>
+                                <span class="date">{item.date}</span>
+                            </div>
+                            <div class="institution">{item.institution}</div>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            <section>
+                <h2>Publications</h2>
+                <ul class="publications">
+                    {publications.map((pub: any) => (
+                        <li>
+                            <strong>
+                                {pub.entryTags.url ? (
+                                    <a href={pub.entryTags.url} target="_blank" rel="noopener noreferrer">
+                                        {pub.entryTags.title}
+                                    </a>
+                                ) : (
+                                    pub.entryTags.title
+                                )}
+                            </strong>
+                            <span>{pub.entryTags.author}</span>
+                            <span class="venue">
+                                {pub.entryTags.journal || pub.entryTags.booktitle}, {pub.entryTags.year}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        </article>
+    </main>
+</Layout>
+
+<style>
+    :global(body) {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: #f8f9fb;
+        color: #111827;
+    }
+
+    .about {
+        min-height: 100vh;
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+    }
+
+    .content p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    .chipcie-list {
+        list-style: disc;
+        padding-left: 2rem;
+        margin-bottom: 1.5rem;
+        color: #4b5563;
+        font-size: 1.1rem;
+    }
+
+    .timeline {
+        list-style: none;
+        padding: 0;
+    }
+
+    .timeline li {
+        margin-bottom: 1.5rem;
+    }
+
+    .timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .timeline-header strong {
+        font-size: 1.25rem;
+        color: #111827;
+    }
+
+    .date {
+        font-size: 0.9rem;
+        color: #6b7280;
+        font-weight: 500;
+    }
+
+    .institution {
+        font-size: 1.1rem;
+        color: #4b5563;
+        margin-top: 0.25rem;
+    }
+
+    .publications {
+        list-style: none;
+        padding: 0;
+    }
+
+    .publications li {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #4b5563;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .publications strong a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    .publications strong a:hover {
+        border-bottom-color: currentColor;
+    }
+
+    .publications .venue {
+        font-style: italic;
+        font-size: 1rem;
+        color: #6b7280;
+        margin-top: 0.1rem;
+    }
+</style>

@@ -1,0 +1,42 @@
+{
+    "education": [
+        {
+            "degree": "MSc Computer Science",
+            "date": "02/2026 — 06/2027",
+            "institution": "Delft University of Technology"
+        },
+        {
+            "degree": "Minor Abroad",
+            "date": "08/2024 — 12/2024",
+            "institution": "Purdue University"
+        },
+        {
+            "degree": "BSc Computer Science and Engineering",
+            "date": "09/2022 — 01/2026",
+            "institution": "Delft University of Technology"
+        }
+    ],
+    "experience": [
+        {
+            "role": "Junior Machine Learning Engineer",
+            "date": "06/2025 — Present",
+            "institution": "Huawei Amsterdam Research Centre"
+        },
+        {
+            "role": "Junior Machine Learning Engineer (Internship)",
+            "date": "01/2025 — 03/2025",
+            "institution": "Huawei Amsterdam Research Centre"
+        },
+        {
+            "role": "IT Support Technician",
+            "date": "05/2024 — 07/2024",
+            "institution": "European Patent Office"
+        }
+    ],
+    "chipcie": [
+        "Northwestern Europe Regional Contest (NWERC) 2023",
+        "Benelux Algorithm Programming Contest (BAPC) 2025",
+        "Delft Algorithm Programming Contest (DAPC) 2023, 2025",
+        "Freshman Programming Contest 2023, 2024, 2025"
+    ]
+}
