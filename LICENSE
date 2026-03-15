@@ -1,0 +1,12 @@
+Copyright (c) 2026 Jan Piotrowski. All rights reserved.
+
+No part of this software, including source code, content, and design, may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright holder.
+
+---
+
+This project was built using the following third-party libraries and resources:
+
+- Astro (MIT License) - Copyright (c) 2021 Fred K. Schott
+- bibtex-parse-js (MIT License) - Copyright (c) 2013 ORCID, Inc. ; 2010 Henrik Muehe
+- Icons by selfhst/icons (MIT License) - Copyright (c) 2022 selfhst.
+- All brand icons and logos (GitHub, LinkedIn, Bluesky, etc.) are the property and copyrighted by their respective owners.
