@@ -1,37 +1,39 @@
 name: Build and Deploy Astro
 
 on:
-  push:
-    branches: [ main ]
+    push:
+        branches: [main]
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: "24"
 
-      - name: Install and Build
-        run: |
-          npm ci
-          npm run build
-          tar -czvf deploy.tar.gz dist/
+            - name: Install and Build
+              run: |
+                  corepack enable
+                  corepack prepare pnpm@latest --activate
+                  pnpm install --frozen-lockfile
+                  pnpm run build
+                  tar -czvf deploy.tar.gz dist/
 
-      - name: Create Release and Upload Asset
-        uses: https://github.com/softprops/action-gh-release@v2
-        with:
-            tag_name: deploy-${{ github.sha }}
-            name: Deployment ${{ github.sha }}
-            files: deploy.tar.gz
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Create Release and Upload Asset
+              uses: https://github.com/softprops/action-gh-release@v2
+              with:
+                  tag_name: deploy-${{ github.sha }}
+                  name: Deployment ${{ github.sha }}
+                  files: deploy.tar.gz
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Trigger Webhook
-        run: |
-            curl -X POST ${{ secrets.WEBHOOK_URL }} \
-                -H "X-Deploy-Token: ${{ secrets.WEBHOOK_TOKEN }}"
+            - name: Trigger Webhook
+              run: |
+                  curl -X POST ${{ secrets.WEBHOOK_URL }} \
+                      -H "X-Deploy-Token: ${{ secrets.WEBHOOK_TOKEN }}"

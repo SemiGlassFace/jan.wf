@@ -1,12 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import bibtexParse from 'bibtex-parse-js';
-import bibContent from '../data/publications.bib?raw';
-import aboutData from '../data/about.json';
-import Navbar from '../components/Navbar.astro';
+import Layout from "../layouts/Layout.astro";
+import aboutData from "../data/about.json";
+import Navbar from "../components/Navbar.astro";
 
-const publications = bibtexParse.toJSON(bibContent);
-const { education, experience, chipcie } = aboutData;
+const { education, experience, chipcie, publications } = aboutData;
 ---
 
 <Layout title="Jan Piotrowski - About Me">
@@ -17,71 +14,89 @@ const { education, experience, chipcie } = aboutData;
             <h1>About Me</h1>
             <section>
                 <p>
-                    Hi! I'm Jan Piotrowski, a Master Computer Science student at TU Delft and a Machine Learning Engineer at Huawei's Amsterdam Research Centre.
+                    Hi! I'm Jan Piotrowski, a Master Computer Science student at
+                    TU Delft and a Machine Learning Engineer at Huawei's
+                    Amsterdam Research Centre.
                 </p>
                 <p>
-                    I am also currently a commisioner of systems in <a href="https://chipcie.wisv.ch/">CHipCie</a>, where I have helped organize following ICPC style competitions:
+                    I am also currently a commisioner of systems in <a
+                        href="https://chipcie.wisv.ch/">CHipCie</a
+                    >, where I have helped organize following ICPC style
+                    competitions:
                 </p>
                 <ul class="chipcie-list">
-                    {chipcie.map((comp: string) => (
-                        <li>{comp}</li>
-                    ))}
+                    {chipcie.map((comp: string) => <li>{comp}</li>)}
                 </ul>
                 <p>
-                    In my spare time I love tinkering with my homelab setup, which this site actually runs from.
+                    In my spare time I love tinkering with my homelab setup,
+                    which this site actually runs from.
                 </p>
             </section>
 
             <section>
                 <h2>Education</h2>
                 <ul class="timeline">
-                    {education.map((item) => (
-                        <li>
-                            <div class="timeline-header">
-                                <strong>{item.degree}</strong>
-                                <span class="date">{item.date}</span>
-                            </div>
-                            <div class="institution">{item.institution}</div>
-                        </li>
-                    ))}
+                    {
+                        education.map((item) => (
+                            <li>
+                                <div class="timeline-header">
+                                    <strong>{item.degree}</strong>
+                                    <span class="date">{item.date}</span>
+                                </div>
+                                <div class="institution">
+                                    {item.institution}
+                                </div>
+                            </li>
+                        ))
+                    }
                 </ul>
             </section>
 
             <section>
                 <h2>Experience</h2>
                 <ul class="timeline">
-                    {experience.map((item) => (
-                        <li>
-                            <div class="timeline-header">
-                                <strong>{item.role}</strong>
-                                <span class="date">{item.date}</span>
-                            </div>
-                            <div class="institution">{item.institution}</div>
-                        </li>
-                    ))}
+                    {
+                        experience.map((item) => (
+                            <li>
+                                <div class="timeline-header">
+                                    <strong>{item.role}</strong>
+                                    <span class="date">{item.date}</span>
+                                </div>
+                                <div class="institution">
+                                    {item.institution}
+                                </div>
+                            </li>
+                        ))
+                    }
                 </ul>
             </section>
 
             <section>
                 <h2>Publications</h2>
                 <ul class="publications">
-                    {publications.map((pub: any) => (
-                        <li>
-                            <strong>
-                                {pub.entryTags.url ? (
-                                    <a href={pub.entryTags.url} target="_blank" rel="noopener noreferrer">
-                                        {pub.entryTags.title}
-                                    </a>
-                                ) : (
-                                    pub.entryTags.title
-                                )}
-                            </strong>
-                            <span>{pub.entryTags.author}</span>
-                            <span class="venue">
-                                {pub.entryTags.journal || pub.entryTags.booktitle}, {pub.entryTags.year}
-                            </span>
-                        </li>
-                    ))}
+                    {
+                        publications.map((pub: any) => (
+                            <li>
+                                <strong>
+                                    {pub.url ? (
+                                        <a
+                                            href={pub.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {pub.title}
+                                        </a>
+                                    ) : (
+                                        pub.title
+                                    )}
+                                </strong>
+                                <span>{pub.author}</span>
+                                <span class="venue">
+                                    {pub.journal || pub.booktitle}, {pub.year}
+                                </span>
+                            </li>
+                        ))
+                    }
                 </ul>
             </section>
         </article>
@@ -90,7 +105,14 @@ const { education, experience, chipcie } = aboutData;
 
 <style>
     :global(body) {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        font-family:
+            system-ui,
+            -apple-system,
+            Segoe UI,
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif;
         background: #f8f9fb;
         color: #111827;
     }
