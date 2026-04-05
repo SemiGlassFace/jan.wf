@@ -1,0 +1,244 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout title="Jan Piotrowski - Terms of Service">
+    <main class="legal">
+        <Navbar />
+
+        <article class="content">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last updated: April 5, 2026</p>
+
+            <section>
+                <h2>Acceptance of Terms</h2>
+                <p>
+                    By accessing and using any services provided by Laus Code,
+                    registered in the Netherlands ("we", "us", "our"), you agree
+                    to be bound by these Terms of Service. These terms apply to:
+                </p>
+                <ul>
+                    <li><strong>jan.wf</strong> &mdash; our website</li>
+                    <li><strong><a href="https://portal.semig.dev">Authentik</a></strong> &mdash; our identity and authentication service</li>
+                    <li><strong><a href="https://wyjazdy.top67.pl">TREK</a></strong> &mdash; our trip tracking application</li>
+                </ul>
+                <p>
+                    If you do not agree to these terms, please do not use our
+                    services.
+                </p>
+            </section>
+
+            <section>
+                <h2>Description of Services</h2>
+                <h3>jan.wf</h3>
+                <p>
+                    A personal website provided for informational purposes. You
+                    may browse the content freely.
+                </p>
+
+                <h3>Authentik</h3>
+                <p>
+                    An identity and authentication service that provides single
+                    sign-on and account management for our services. By creating
+                    an account, you agree to provide accurate information and to
+                    keep your credentials secure.
+                </p>
+
+                <h3>TREK</h3>
+                <p>
+                    A trip tracking application that allows you to record and
+                    manage your trips. You are responsible for the content you
+                    submit through the application.
+                </p>
+            </section>
+
+            <section>
+                <h2>User Accounts</h2>
+                <p>
+                    Access to Authentik and TREK requires an account. You are
+                    responsible for maintaining the confidentiality of your
+                    account credentials and for all activities that occur under
+                    your account. You must notify us immediately of any
+                    unauthorised use.
+                </p>
+            </section>
+
+            <section>
+                <h2>Acceptable Use</h2>
+                <p>You agree not to:</p>
+                <ul>
+                    <li>Use our services for any unlawful purpose</li>
+                    <li>Attempt to gain unauthorised access to our systems or other users' accounts</li>
+                    <li>Interfere with or disrupt the integrity or performance of our services</li>
+                    <li>Upload or transmit malicious code or content</li>
+                    <li>Use our services in a way that could harm or overburden our infrastructure</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Intellectual Property</h2>
+                <p>
+                    Unless otherwise stated, the content on our services,
+                    including text, images, design, and software, is the
+                    property of Laus Code. You may not reproduce, distribute,
+                    or create derivative works from this content without prior
+                    written permission.
+                </p>
+                <p>
+                    Content you create or upload through TREK remains your
+                    property. By using the service, you grant us a limited
+                    licence to store and process your content solely for the
+                    purpose of providing the service.
+                </p>
+            </section>
+
+            <section>
+                <h2>Service Availability</h2>
+                <p>
+                    We strive to keep our services available but do not
+                    guarantee uninterrupted or error-free operation. We reserve
+                    the right to modify, suspend, or discontinue any service at
+                    any time, with reasonable notice where possible.
+                </p>
+            </section>
+
+            <section>
+                <h2>Disclaimer</h2>
+                <p>
+                    Our services are provided "as is" and "as available" without
+                    warranties of any kind, either express or implied. We do not
+                    guarantee the accuracy, completeness, or usefulness of any
+                    information provided through our services.
+                </p>
+            </section>
+
+            <section>
+                <h2>Limitation of Liability</h2>
+                <p>
+                    To the maximum extent permitted by Dutch law, Laus Code
+                    shall not be liable for any indirect, incidental, special,
+                    consequential, or punitive damages, or any loss of data,
+                    profits, or revenue arising out of or in connection with
+                    your use of our services.
+                </p>
+            </section>
+
+            <section>
+                <h2>Termination</h2>
+                <p>
+                    We may suspend or terminate your access to our services if
+                    you violate these terms. You may delete your account at any
+                    time. Upon termination, your right to use the services
+                    ceases immediately.
+                </p>
+            </section>
+
+            <section>
+                <h2>Governing Law</h2>
+                <p>
+                    These Terms of Service are governed by and construed in
+                    accordance with the laws of the Netherlands. Any disputes
+                    arising from these terms shall be subject to the exclusive
+                    jurisdiction of the competent courts in the Netherlands.
+                </p>
+            </section>
+
+            <section>
+                <h2>Changes to These Terms</h2>
+                <p>
+                    We reserve the right to modify these Terms of Service at any
+                    time. Changes will be posted on this page with an updated
+                    date. Continued use of our services after changes
+                    constitutes acceptance of the revised terms.
+                </p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>
+                    If you have any questions about these Terms of Service, you
+                    can reach us at <a href="mailto:jan@lauscode.com">jan@lauscode.com</a>.
+                </p>
+            </section>
+        </article>
+    </main>
+</Layout>
+
+<style>
+    :global(body) {
+        font-family:
+            system-ui,
+            -apple-system,
+            Segoe UI,
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif;
+        background: #f8f9fb;
+        color: #111827;
+    }
+
+    .legal {
+        min-height: 100vh;
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-bottom: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+    }
+
+    .content p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    .content h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #111827;
+    }
+
+    .content ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #4b5563;
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+
+    .content a {
+        color: #111827;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    .content a:hover {
+        border-bottom-color: currentColor;
+    }
+</style>
