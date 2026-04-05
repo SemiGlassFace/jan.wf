@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout title="Piotrowski Portal - Terms of Service">
+    <main class="legal">
+        <Navbar />
+
+        <article class="content">
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last updated: April 16, 2026</p>
+
+            <section>
+                <h2>About These Services</h2>
+                <p>
+                    Piotrowski Portal is a collection of personal projects
+                    operated by Jan Piotrowski as a private individual based in
+                    the Netherlands. These services are not provided as part of
+                    any business or commercial entity. The following terms apply
+                    to:
+                </p>
+                <ul>
+                    <li><strong>jan.wf</strong> &mdash; personal website</li>
+                    <li>
+                        <strong
+                            ><a href="https://portal.semig.dev">Authentik</a
+                            ></strong
+                        > &mdash; identity and authentication service
+                    </li>
+                    <li>
+                        <strong
+                            ><a href="https://wyjazdy.top67.pl">TREK</a></strong
+                        > &mdash; trip tracking application
+                    </li>
+                    <li>
+                        <strong
+                            ><a href="https://git.semig.dev">Forgejo</a></strong
+                        > &mdash; self-hosted Git forge
+                    </li>
+                </ul>
+                <p>
+                    By accessing or using any of these services, you agree to be
+                    bound by these Terms of Service.
+                </p>
+            </section>
+
+            <section>
+                <h2>No Warranty</h2>
+                <p>
+                    All services are provided "as is" and "as available" without
+                    warranties of any kind, whether express or implied. As
+                    personal projects, they are maintained on a best-effort
+                    basis. No guarantee is made regarding uptime, reliability,
+                    or data integrity. Services may be modified, suspended, or
+                    discontinued at any time without prior notice.
+                </p>
+            </section>
+
+            <section>
+                <h2>User Accounts</h2>
+                <p>
+                    Certain services require an account for access. You are
+                    responsible for maintaining the confidentiality of your
+                    credentials and for all activity that occurs under your
+                    account. Any suspected unauthorised access should be
+                    reported promptly.
+                </p>
+            </section>
+
+            <section>
+                <h2>User Content</h2>
+                <p>
+                    Content you create or upload through these services remains
+                    your property. By using the services, you grant a limited
+                    licence to store and process your content solely for the
+                    purpose of providing the service. You are responsible for
+                    ensuring that your content does not violate any applicable
+                    laws.
+                </p>
+            </section>
+
+            <section>
+                <h2>Acceptable Use</h2>
+                <p>
+                    You agree not to use these services for any unlawful
+                    purpose, to attempt to gain unauthorised access to systems
+                    or other users' accounts, to interfere with the operation of
+                    the services, or to upload malicious content. Violation of
+                    these terms may result in immediate suspension or
+                    termination of access.
+                </p>
+            </section>
+
+            <section>
+                <h2>Limitation of Liability</h2>
+                <p>
+                    To the maximum extent permitted by Dutch law, Jan Piotrowski
+                    shall not be liable for any indirect, incidental, special,
+                    consequential, or punitive damages, or any loss of data
+                    arising from your use of these services.
+                </p>
+            </section>
+
+            <section>
+                <h2>Modifications</h2>
+                <p>
+                    These Terms of Service may be updated at any time. Changes
+                    will be posted on this page with a revised date. Continued
+                    use of the services following any changes constitutes
+                    acceptance of the updated terms.
+                </p>
+            </section>
+
+            <section>
+                <h2>Governing Law</h2>
+                <p>
+                    These terms are governed by and construed in accordance with
+                    the laws of the Netherlands.
+                </p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>
+                    For questions regarding these Terms of Service, please
+                    contact <a href="mailto:jan@semig.dev">jan@semig.dev</a>.
+                </p>
+            </section>
+        </article>
+    </main>
+</Layout>
+
+<style>
+    :global(body) {
+        font-family:
+            system-ui,
+            -apple-system,
+            Segoe UI,
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif;
+        background: #f8f9fb;
+        color: #111827;
+    }
+
+    .legal {
+        min-height: 100vh;
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-bottom: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+    }
+
+    .content p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    .content h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #111827;
+    }
+
+    .content ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #4b5563;
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+
+    .content a {
+        color: #111827;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    .content a:hover {
+        border-bottom-color: currentColor;
+    }
+</style>

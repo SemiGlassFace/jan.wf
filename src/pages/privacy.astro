@@ -1,0 +1,204 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout title="Piotrowski Portal - Privacy Policy">
+    <main class="legal">
+        <Navbar />
+
+        <article class="content">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: April 16, 2026</p>
+
+            <section>
+                <h2>Data Controller</h2>
+                <p>
+                    The data controller for all services is Jan Piotrowski,
+                    acting as a private individual based in the Netherlands.
+                    These services are personal projects and are not operated as
+                    part of any business entity. This policy applies to:
+                </p>
+                <ul>
+                    <li><strong>jan.wf</strong> &mdash; personal website</li>
+                    <li>
+                        <strong
+                            ><a href="https://portal.semig.dev">Authentik</a
+                            ></strong
+                        > &mdash; identity and authentication service
+                    </li>
+                    <li>
+                        <strong
+                            ><a href="https://wyjazdy.top67.pl">TREK</a></strong
+                        > &mdash; trip tracking application
+                    </li>
+                    <li>
+                        <strong
+                            ><a href="https://git.semig.dev">Forgejo</a></strong
+                        > &mdash; self-hosted Git forge
+                    </li>
+                </ul>
+                <p>
+                    As these are purely personal, non-commercial projects, they
+                    fall outside the scope of the General Data Protection
+                    Regulation (GDPR) per Article 2. This privacy policy is
+                    provided voluntarily as a matter of transparency.
+                </p>
+            </section>
+
+            <section>
+                <h2>Information Collected</h2>
+                <p>
+                    <strong>jan.wf</strong> does not collect any personal information.
+                    There are no user accounts, forms, or tracking scripts on this
+                    site.
+                </p>
+                <p>
+                    <strong>Authentik, TREK, and Forgejo</strong> collect the data
+                    necessary to provide their respective services:
+                </p>
+                <ul>
+                    <li>
+                        Account credentials (username, email address, password
+                        hash)
+                    </li>
+                    <li>Authentication logs (login times, IP addresses)</li>
+                    <li>Content you create (trips, code, issues, comments)</li>
+                    <li>
+                        Standard server logs (IP address, browser type,
+                        timestamps)
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Cookies</h2>
+                <p>
+                    jan.wf does not use cookies. Authentik and TREK use strictly
+                    necessary session cookies for authentication purposes.
+                </p>
+            </section>
+
+            <section>
+                <h2>Data Sharing</h2>
+                <p>
+                    Personal data is not sold, shared with, or disclosed to
+                    third parties.
+                </p>
+            </section>
+
+            <section>
+                <h2>Data Retention</h2>
+                <p>
+                    Personal data is retained for the duration of your use of
+                    the services. Server logs are retained for a limited period
+                    for security purposes. Account data is deleted upon account
+                    deletion.
+                </p>
+            </section>
+
+            <section>
+                <h2>Your Data</h2>
+                <p>
+                    If you would like to request access to, correction of, or
+                    deletion of your personal data, please contact
+                    <a href="mailto:jan@semig.dev">jan@semig.dev</a>.
+                </p>
+            </section>
+
+            <section>
+                <h2>Modifications</h2>
+                <p>
+                    This Privacy Policy may be updated at any time. Changes will
+                    be posted on this page with a revised date.
+                </p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>
+                    For questions regarding this Privacy Policy, please contact
+                    <a href="mailto:jan@semig.dev">jan@semig.dev</a>.
+                </p>
+            </section>
+        </article>
+    </main>
+</Layout>
+
+<style>
+    :global(body) {
+        font-family:
+            system-ui,
+            -apple-system,
+            Segoe UI,
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif;
+        background: #f8f9fb;
+        color: #111827;
+    }
+
+    .legal {
+        min-height: 100vh;
+    }
+
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+    }
+
+    .content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-bottom: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.75rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e5e7eb;
+        padding-bottom: 0.5rem;
+    }
+
+    .content p {
+        font-size: 1.125rem;
+        line-height: 1.5;
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+        text-align: justify;
+    }
+
+    .content h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #111827;
+    }
+
+    .content ul {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: #4b5563;
+        font-size: 1.125rem;
+        line-height: 1.8;
+    }
+
+    .content a {
+        color: #111827;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    .content a:hover {
+        border-bottom-color: currentColor;
+    }
+</style>
