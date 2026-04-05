@@ -3,6 +3,11 @@
 <footer class="footer">
     <div class="container">
         <p>&copy; 2026 Jan Piotrowski. All rights reserved.</p>
+        <p class="links">
+            <a href="/privacy">Privacy Policy</a>
+            <span class="separator">&middot;</span>
+            <a href="/tos">Terms of Service</a>
+        </p>
         <p class="attribution">Icons & logos belong to their respective owners.</p>
     </div>
 </footer>
@@ -25,6 +30,26 @@
         color: #6b7280;
         font-size: 0.9rem;
         margin: 0;
+    }
+
+    .footer .links {
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .footer .links a {
+        color: #6b7280;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .footer .links a:hover {
+        color: #111827;
+    }
+
+    .footer .separator {
+        margin: 0 0.5rem;
+        color: #9ca3af;
     }
 
     .footer .attribution {
