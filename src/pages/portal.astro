@@ -1,0 +1,263 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout title="Piotrowski Portal">
+    <main class="portal">
+        <Navbar />
+
+        <section class="hero">
+            <h1>Piotrowski Portal</h1>
+            <p class="tagline">Personal services provided by Jan Piotrowski.</p>
+
+            <div class="services">
+                <a href="https://portal.semig.dev" class="service-card">
+                    <div class="service-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><rect
+                                width="18"
+                                height="11"
+                                x="3"
+                                y="11"
+                                rx="2"
+                                ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"
+                            ></path></svg
+                        >
+                    </div>
+                    <h2>Authentik</h2>
+                    <p>
+                        Identity and authentication service providing single
+                        sign-on for all of mine services.
+                    </p>
+                    <span class="link-text">portal.semig.dev &rarr;</span>
+                </a>
+
+                <a href="https://wyjazdy.top67.pl" class="service-card">
+                    <div class="service-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path
+                                d="M17 3h2a2 2 0 0 1 2 2v2"></path><path
+                                d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path
+                                d="M7 21H5a2 2 0 0 1-2-2v-2"></path><path
+                                d="M8 14s1.5 2 4 2 4-2 4-2"></path><circle
+                                cx="9"
+                                cy="9"
+                                r="1"></circle><circle cx="15" cy="9" r="1"
+                            ></circle></svg
+                        >
+                    </div>
+                    <h2>TREK</h2>
+                    <p>
+                        Trip tracking application for recording and managing
+                        your trips.
+                    </p>
+                    <span class="link-text">wyjazdy.top67.pl &rarr;</span>
+                </a>
+                <a href="https://git.semig.dev" class="service-card">
+                    <div class="service-icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            ><circle cx="18" cy="18" r="3"></circle><circle
+                                cx="6"
+                                cy="6"
+                                r="3"></circle><path d="M6 21V9a9 9 0 0 0 9 9"
+                            ></path></svg
+                        >
+                    </div>
+                    <h2>Forgejo</h2>
+                    <p>
+                        Self-hosted Git forge for code hosting and
+                        collaboration.
+                    </p>
+                    <span class="link-text">git.semig.dev &rarr;</span>
+                </a>
+            </div>
+
+            <div class="legal-links">
+                <a href="/privacy">Privacy Policy</a>
+                <span class="separator">&middot;</span>
+                <a href="/tos">Terms of Service</a>
+            </div>
+
+            <div class="contact">
+                <p>
+                    Contact:
+                    <a href="mailto:jan@lauscode.com">jan@lauscode.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    :global(body) {
+        font-family:
+            system-ui,
+            -apple-system,
+            Segoe UI,
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif;
+        background: #f8f9fb;
+        color: #111827;
+    }
+
+    .portal {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        text-align: center;
+        flex: 1;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        margin: 0 0 1rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        color: #4b5563;
+        margin-bottom: 3rem;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5rem 2rem;
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        text-decoration: none;
+        color: inherit;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .service-card:hover {
+        border-color: #111827;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        transform: translateY(-2px);
+    }
+
+    .service-icon {
+        color: #6b7280;
+        margin-bottom: 1.25rem;
+        transition: color 0.2s ease;
+    }
+
+    .service-card:hover .service-icon {
+        color: #111827;
+    }
+
+    .service-card h2 {
+        font-size: 1.5rem;
+        margin: 0 0 0.75rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        color: #4b5563;
+        line-height: 1.5;
+        margin: 0 0 1rem;
+    }
+
+    .link-text {
+        font-size: 0.9rem;
+        color: #6b7280;
+        font-weight: 500;
+        margin-top: auto;
+        transition: color 0.2s ease;
+    }
+
+    .service-card:hover .link-text {
+        color: #111827;
+    }
+
+    .legal-links {
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .legal-links a {
+        color: #6b7280;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .legal-links a:hover {
+        color: #111827;
+    }
+
+    .separator {
+        margin: 0 0.5rem;
+        color: #9ca3af;
+    }
+
+    .contact p {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin: 0;
+    }
+
+    .contact a {
+        color: #111827;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease;
+    }
+
+    .contact a:hover {
+        border-bottom-color: currentColor;
+    }
+
+    @media (max-width: 860px) {
+        .services {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
