@@ -38,5 +38,14 @@
         "Benelux Algorithm Programming Contest (BAPC) 2025",
         "Delft Algorithm Programming Contest (DAPC) 2023, 2025",
         "Freshman Programming Contest 2023, 2024, 2025"
+    ],
+    "publications": [
+        {
+            "title": "EvoScientist: Towards Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery",
+            "author": "Yougang Lyu and Xi Zhang and Xinhao Yi and Yuyue Zhao and Shuyu Guo and Wenxiang Hu and Jan Piotrowski and Jakub Kaliski and Jacopo Urbani and Zaiqiao Meng and Lun Zhou and Xiaohui Yan",
+            "journal": "arXiv preprint arXiv:2603.08127",
+            "year": 2026,
+            "url": "https://arxiv.org/abs/2603.08127"
+        }
     ]
 }
